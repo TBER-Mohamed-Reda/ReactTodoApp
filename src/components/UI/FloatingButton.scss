@@ -1,0 +1,102 @@
+$purple: #8974fb;
+$light-purple: #c784dd;
+
+.buttonContainer {
+  width: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: 3em;
+  right: 2em;
+}
+
+#toggle {
+  -webkit-appearance: none;
+}
+
+.button {
+  position: absolute;
+  z-index: 999;
+  width: 43px;
+  height: 43px;
+  background: $purple;
+  border-radius: 100%;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  top: -12px;
+
+  &:before {
+    position: absolute;
+    content: "";
+    width: 20px;
+    height: 2px;
+    background: #fff;
+    transform: rotate(90deg);
+    transition: all 0.4s ease;
+  }
+  &:after {
+    position: absolute;
+    content: "";
+    width: 20px;
+    height: 2px;
+    background: #fff;
+    transition: all 0.4s ease;
+  }
+}
+
+.nav {
+  opacity: 0;
+  transition: all 0.4s ease-in-out;
+  background: #fff;
+  width: 100%;
+  border-radius: 5px;
+  transform: translateY(0%);
+  box-shadow: 2px 3px 10px 0 rgba(81, 81, 81, 0.1);
+  border: 1px solid #e4e4e4;
+  padding: 10px 15px 10px 15px;
+
+  ul {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+  }
+
+  span {
+    text-align: center;
+    margin: 10px 0;
+    color: $purple;
+    text-decoration: none;
+    font-family: "Roboto", sans-serif;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-size: 14px;
+    cursor: pointer;
+
+    &:hover {
+      color: $light-purple;
+    }
+  }
+}
+
+#toggle.checked ~ .nav {
+  opacity: 1;
+  transform: translateY(10%);
+}
+
+#toggle.checked ~ .button:before {
+  transform: rotate(225deg);
+}
+
+#toggle.checked ~ .button:after {
+  transform: rotate(135deg);
+}
+
+@media (max-width: 640px) {
+  .buttonContainer {
+    width: 100%;
+  }
+}

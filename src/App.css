@@ -1,0 +1,99 @@
+@import url("https://fonts.googleapis.com/css?family=Roboto");
+
+body {
+  background-color: #352f5b;
+  font-family: "Roboto", sans-serif;
+}
+
+.container {
+  max-width: 450px;
+  margin-top: 10%;
+}
+
+/* Todo */
+
+input[type="text"],
+input[type="text"]:focus {
+  color: #fff;
+  border: none;
+  background-color: rgba(0, 0, 0, 0.2);
+}
+
+label.add {
+  margin-bottom: 15px;
+}
+
+li.list-group-item {
+  background-color: #423a6f;
+  color: #f8f9fa;
+}
+
+.pointer {
+  cursor: pointer;
+}
+
+.item-complete {
+  background-color: #3c3b45 !important;
+}
+h1 {
+  color: white;
+  text-align: center;
+}
+.btn {
+  color: white;
+  background-color: #8974fb;
+  border-radius: 5em;
+  float: left;
+  margin-bottom: 50px;
+}
+h3 {
+  color: white;
+}
+.container-page-found {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.pageNotFound {
+  color: rgba(255, 33, 33, 0.907);
+}
+.text-error {
+  color: white;
+}
+.text-danger {
+  color: rgba(255, 33, 33, 0.907);
+  font-weight: bold;
+  text-align: center;
+  font-size: 30px;
+}
+h2 {
+  color: white;
+}
+.about-container {
+  margin-top: 10px;
+  border: #f8f9fa 3px solid;
+  padding: 15px;
+  background-color: #8974fb;
+  border-radius: 3em;
+  margin-bottom: 50px;
+}
+.about-container li {
+  list-style: none;
+}
+.load-api {
+  color: white;
+  font-weight: bold;
+  text-align: center;
+}
+.btn-login {
+  text-align: center;
+  color: white;
+  background-color: #8974fb;
+  border-radius: 5em;
+}
+.element-checked {
+  color: white;
+  margin-top: 20px;
+  text-align: center;
+}
